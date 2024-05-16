@@ -4,18 +4,26 @@
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.min.js' integrity='sha512-6i4FxVh0YbXCtxtqrFlG0H6FJRO4YQ5fyFH0JBdAAiqCt6/Q+jHMabMSC8FpESVSJZvnQ52dB2A8OD9SMk7buw==' crossorigin='anonymous'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.min.js' integrity='sha512-I5GJQRKGdj2miDs8ComgARfiAQiZJo/43YasH22qtweoG+YRXLTDYegxC/vPgw/ERxRzww/F4l4+8UiMmI20sw==' crossorigin='anonymous'></script>
-
-    <!-- step 2: addition -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.22.5/babel.min.js' integrity='sha512-AQRUOtXVYA6lH5q3XJQkFUwZU9OmS3pwmJTe6uSeCvdsmKVEqkBpqnaiuLR99d67gTCgJ0IsGopgiffzXB+XYQ==' crossorigin='anonymous'></script>
     
-    <!-- step 3: change text/javascript to text/jsx -->
     <script type="text/jsx">
       const app = document.getElementById('app');
+
+      // -- step 3: 
+      function Homepage() {
+        return <div>
+          <Header />
+          <Header />
+        </div>
+      }
+
+      // -- step 1: change header to Header
+      function Header() {
+        return <h1>Hello World !</h1>
+      }
       
-      // -- step 1
-      // jsx -> ngebantu buat bikin ui dengan sintaks yang mirip dengan html
-      // tapi browser ga ngerti jsx, otomatis perlu babel
-      ReactDOM.render(<h1>Hello World !</h1>, app)
+      // -- step 2: change header to <Header />
+      ReactDOM.render(<Homepage />, app)
     </script>
   </body>
 </html>
