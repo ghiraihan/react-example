@@ -1,0 +1,29 @@
+<html>
+  <body>
+    <div id="app"></div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.min.js' integrity='sha512-6i4FxVh0YbXCtxtqrFlG0H6FJRO4YQ5fyFH0JBdAAiqCt6/Q+jHMabMSC8FpESVSJZvnQ52dB2A8OD9SMk7buw==' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.min.js' integrity='sha512-I5GJQRKGdj2miDs8ComgARfiAQiZJo/43YasH22qtweoG+YRXLTDYegxC/vPgw/ERxRzww/F4l4+8UiMmI20sw==' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.22.5/babel.min.js' integrity='sha512-AQRUOtXVYA6lH5q3XJQkFUwZU9OmS3pwmJTe6uSeCvdsmKVEqkBpqnaiuLR99d67gTCgJ0IsGopgiffzXB+XYQ==' crossorigin='anonymous'></script>
+    
+    <script type="text/jsx">
+      const app = document.getElementById('app');
+
+      function Homepage() {
+        return <div>
+          <Header title="Hello" />
+          <Header title="World !" />
+        </div>
+      }
+
+      // step 1: change "props" to { title }
+      function Header({ title }) {
+        // step 2: change "title" to { title }
+        // curly brace to enter js land from jsx land
+        return <h1>{ title }</h1>
+      }
+      
+      ReactDOM.render(<Homepage />, app)
+    </script>
+  </body>
+</html>
